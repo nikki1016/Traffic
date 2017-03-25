@@ -20,7 +20,8 @@ Create local host using laragon/xampp then
 3. Type 'localhost/Home.html'  in browser URL to open landing page
 4. Type 'localhost/phpbb3' in browser URL to run Traffic forum
 5. The "Forum" tab (in Home.html) has to be linked to the "index.php" file (in phpbb3).
-6. The Python script can pick data from the forum and tweet incidents to state police.
+6. Remove the install directory after installing phpbb3 on the host.
+7. The Python script can pick data from the forum and tweet incidents to state police.
 
 
 
