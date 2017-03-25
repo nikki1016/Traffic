@@ -1,21 +1,20 @@
 import tweepy
 import mysql.connector
-consumer_key = '6Q8zYIUxsH7NuWXs505STGTiC'
-consumer_secret = '5pjrMwpYXycABc1o6ZhjtiFfMis2sShwzrUBEmXHuMFh5Yci8e'
-access_token = '373411090GsnxZEsKebLZIrI9CoosfldGH78z4Bkrz6pfwKRr'
-access_token_secret = 'mbSVnlNIOiXIallA9NIws51l9mzpi6C2D49ihqktQhMRv'
+consumer_key = 'Yu6yUQXoYdHND2tFs4zjyPiR7'
+consumer_secret = 'cFKf6UaPNoPFNvJPoJjJhUHE629uPqJfzXJ6lycotjTBsQI0s3'
+access_token = '373411090-xNmx3gEK3MLM9cminHnqDk1j6pCh1j8Rki5Gsfdw'
+access_token_secret = 'BNtrExisb5PGXdeA6drLfHjS79OQg4IHidVcogTOQHbxU'
 try:
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-	redirect_url = auth.get_authorization_url()
+	auth.set_access_token(access_token, access_token_secret)
+	api = tweepy.API(auth)
 except tweepy.TweepError:
-	print 'Error! Failed to get request token.' 
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
-cnx = mysql.connector.connect(user='root', database='traffic')
+	print ('Error! Failed to get request token.') 
+cnx = mysql.connector.connect(user='root', password='rushal1', database='traffic')
 cursor = cnx.cursor()
 query = ("SELECT * FROM temp")
 cursor.execute(query)
 for (a, b) in cursor:
-	api.update_status('#'+a+b)
+	api.update_status('@DelhiTrafficPol'+' #'+a+' '+b)
 cursor.close()
 cnx.close()
