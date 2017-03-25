@@ -1,6 +1,6 @@
-## Traffic
+# No_Traffic-ing
 
-A web forum where users can share:
+A traffic solution for both the common man and traffic law enforcement. A web forum where users can share:
 
 1. Traffic updates (jams,diversions,construction work etc.) for other users and 
 2. Alert law enforcement moderators to traffic violations (someone jumping a light at an intersection where police isn't deployed, a hit and run) along with details of the culprits vehicle if they can.
@@ -20,6 +20,8 @@ Create local host using laragon/xampp then
 3. Type 'localhost/Home.html'  in browser URL to open landing page
 4. Type 'localhost/phpbb3' in browser URL to run Traffic forum
 5. The "Forum" tab (in Home.html) has to be linked to the "index.php" file (in phpbb3).
+6. Remove the install directory after installing phpbb3 on the host.
+7. The Python script can pick data from the forum and tweet incidents to state police.
 
 
 
