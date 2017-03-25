@@ -9,7 +9,7 @@ Details
 
 - Landing Page (Home Page) - Basic HTML script.
 - Forum - [phpBB3](https://www.phpbb.com/ "phpBB3") based (no registration/login required) - Only admin and moderator login.
-- Reporting - Tweets to state traffic police using Twitter API.
+- Reporting - Tweets to state traffic police using python script.
 
 How to use - 
 
